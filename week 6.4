@@ -1,0 +1,11 @@
+n=int(input())
+l1=[]
+for i in range(n):
+    s=int(input())
+    l1.append(s)
+l2=[]
+for i in l1:
+    if i not in l2:
+        l2.append(i)
+for i in l2:
+    print(i,'occurs',l1.count(i),'times')
