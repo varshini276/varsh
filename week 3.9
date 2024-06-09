@@ -1,0 +1,23 @@
+a=float(input())
+n=int(a)
+if(n<100):
+    print("{:.2f}".format(n*2))
+
+elif(n<=199):
+    b=1.20*n
+    print("{:.2f}".format(b))
+elif(n>=200):
+    if(n<400):
+       b=1.50*n
+       print("{:.2f}".format(b))
+    elif(n>=400):
+        if(n<600):
+            b=1.80*n
+            c=0.15*b
+            s=b+c
+            print("{:.2f}".format(s))
+        elif(n>600):
+            b=n*2.00
+            c=0.15*b
+            s=b+c
+            print("{:.2f}".format(s))
