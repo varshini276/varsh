@@ -1,0 +1,21 @@
+def categorize_books():
+    import sys
+    input = sys.stdin.read
+    data = input().strip().split('\n')
+    books_by_genre = {}
+    for line in data:
+        if not line:
+            break
+        book, genre = map(str.strip, line.split(',', 1))
+
+
+        if genre not in books_by_genre:
+            books_by_genre[genre] = []
+        books_by_genre[genre].append(book)
+
+
+    for genre, books in books_by_genre.items():
+        print(f"{genre}: {', '.join(books)}")
+
+
+categorize_books()
