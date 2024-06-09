@@ -1,0 +1,17 @@
+sizes = input().split()
+size1 = int(sizes[0])
+size2 = int(sizes[1])
+array1 = list(map(int, input().split()))
+array2 = list(map(int, input().split()))
+non_repeating = []
+for num in array1:
+    if num not in array2:
+        non_repeating.append(num)
+for num in array2:
+    if num not in array1:
+        non_repeating.append(num)
+if len(non_repeating) == 0:
+    print("NO SUCH ELEMENTS")
+else:
+    print(" ".join(map(str, non_repeating)))
+    print(len(non_repeating))
